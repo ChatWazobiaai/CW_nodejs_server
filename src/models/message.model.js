@@ -5,7 +5,7 @@ const messageSchema = new mongoose.Schema({
   messagesArrayID: { type: String, required: false },
   text: { type: String, required: true },
   senderId: { type: String, required: false },
-  receiverId: [{ type: String }],
+  receiverId: [{ type: String, required: false }],
   status: { type: String, required: false },
   reactions: [
     {

@@ -25,7 +25,7 @@
     "multer": "^1.4.5-lts.1",
     "multicoin-address-validator": "^0.5.16",
     "mutter": "^1.0.1",
-    "nodemailer": "^6.9.13",
+    "nodemailer": "^6.10.1",
     "nodemon": "^3.1.0",
     "otp-generator": "^4.0.1",
     "peer": "^1.0.2",
