@@ -21,12 +21,17 @@ mongoose
     console.error("MongoDB connection error:", err);
     process.exit(1);
   });
+  
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/contacts", contactsRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/waitlist", waitlistRoutes);
+
+app.get("/", (req, res) => {
+  res.send("✅ Welcome to our server — it's working!");
+});
 
 const server = http.createServer(app);
 initializeSocket(server);
