@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "backblaze-b2": "^1.7.0",
+    "bcrypt": "^6.0.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "crypto-address-validators": "^1.0.3",

@@ -8,6 +8,7 @@ const initializeSocket = require("./socket/messages.sockets"); // Import socket 
 const messageRoutes = require("../src/routes/message.routes");
 const waitlistRoutes = require("./routes/wailtlist.router");
 const cors = require("cors");
+const adminRoutes = require('../src/routes/admin.routes')
 
 dotenv.config();
 
@@ -21,13 +22,14 @@ mongoose
     console.error("MongoDB connection error:", err);
     process.exit(1);
   });
-  
+
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/contacts", contactsRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/waitlist", waitlistRoutes);
+app.use('/api/admin', adminRoutes);
 
 app.get("/", (req, res) => {
   res.send("✅ Welcome to our server — it's working!");
